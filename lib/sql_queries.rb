@@ -33,8 +33,8 @@ end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_summed_amount
   "SELECT users.name, SUM(pledges.amount) AS total_contributions
-  FROM users 
-  INNER JOIN pledges 
+  FROM users
+  INNER JOIN pledges
   ON pledges.amount
   GROUP BY users.name
   ORDER BY total_contributions ASC; "
